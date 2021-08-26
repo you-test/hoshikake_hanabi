@@ -1,0 +1,60 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $family_main;
+  font-size: 20px;
+  line-height: 1.7;
+  letter-spacing: 0.2em;
+  color: $main;
+}
+
+a {
+  text-decoration: none;
+  color: $main;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  display: inline-block;
+  font-size: 3.5rem;
+  font-family: $family_accent;
+  color: $accent;
+  font-weight: bold;
+  line-height: 1.3;
+  letter-spacing: 0.3em;
+  background: linear-gradient(transparent 85%, $title_under 85%);
+  padding: 50px 0 0;
+  margin-bottom: 30px;
+
+  
+  &::before {
+    content: "\005C  　|　 /";
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.01em;
+  }
+}
+
+.sns {
+  @include flex();
+  width: 142px;
+
+  img {
+    width: 30px;
+  }
+}
