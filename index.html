@@ -5,7 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hoshikake Hanabi Festival</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -15,7 +17,7 @@
     <h1>
       <a href="./"><img src="images/logo.png" alt="logo"></a>
     </h1>
-    <nav>
+    <nav class="header-nav">
       <ul>
         <li><a href="./">トップ</a></li>
         <li><a href="#highlight">みどころ</a></li>
@@ -48,7 +50,7 @@
           <h2>星駆花火大会</h2>
           <div class="mv-under">
             <div>
-              <p>北木島</p>
+              <p>IN 北木島</p>
               <p>8月29日(日) 19:00 - 21:00</p>
             </div>
             <ul class="sns">
@@ -63,7 +65,7 @@
     <!-- end mv -->
     <!-- hightlight -->
     <section id="highlight">
-      <div class="container">
+      <div class="container fadein">
         <h3 class="section-title">みどころ</h3>
         <p>2時間で2万発！！<br class="br-sp">日本最大級の花火大会♬</p>
         <p>海の特等席！！<br class="br-sp">クルーズコースあります♬♬</p>
@@ -74,7 +76,7 @@
     <!-- end heightlight -->
     <!-- about -->
     <section id="about">
-      <div class="container">
+      <div class="container fadein">
         <h3 class="section-title">星駆花火大会について</h3>
         <p>
           １９８０年にから４０年以上も続く伝統的な花火大会
@@ -90,7 +92,7 @@
     <!-- end about -->
     <!-- cruise -->
     <section id="cruise">
-      <div class="container">
+      <div class="container fadein">
         <h3 class="section-title">クルーズコースのご案内</h3>
         <p>
           海上からゆったり花火を眺めることができる<br class="br-pc">
@@ -121,29 +123,29 @@
     <!-- outline -->
     <section id="event-outline">
       <div class="container">
-        <h3 class="section-title">開催概要</h3>
-        <div class="event-outline-block">
+        <h3 class="section-title fadein">開催概要</h3>
+        <div class="event-outline-block fadein">
           <div class="event-outline-title">●開催場所</div>
           <p>岡山県笠岡市北小島星駆町</p>
         </div>
-        <div class="event-outline-block">
+        <div class="event-outline-block fadein">
           <div class="event-outline-title">●開催日時</div>
           <p>8月29日(日) 19:00 ~ 21:00</p>
         </div>
-        <div class="event-outline-block">
+        <div class="event-outline-block fadein">
           <div class="event-outline-title">●主催</div>
           <p>星駆花火大会実行委員会</p>
         </div>
-        <div class="event-outline-block">
+        <div class="event-outline-block fadein">
           <div class="event-outline-title">●コンセプト</div>
           <p>
             「みんなが楽しめる花火大会」をコンセプトに、町内外
             問わず誰でも楽しんでいただけるような花火大会となるよう運営しております。
           </p>
         </div>
-        <p>※中止時は15時までにこちらのHPにてお知らせします。</p>
-        <img src="images/hanabi-illust1.png" alt="hanabi">
-        <img src="images/uchiwa-illust.png" alt="uchiwa">
+        <p class="fadein">※中止時は15時までにこちらのHPにてお知らせします。</p>
+        <img src="images/hanabi-illust1.png" alt="hanabi" class="fadein">
+        <img src="images/uchiwa-illust.png" alt="uchiwa" class="fadein">
       </div>
     </section>
     <!-- end event-outline -->
@@ -158,27 +160,27 @@
               <div class="access-block-title">行き(笠岡→北木島)</div>
               <div class="access-block-list">
                 <div class="ship-name">
-                  <img src="images/ship2.png" alt="ship">
+                  <img src="images/ship2.png" alt="ship" class="fadein">
                   <p>伏越港発-金風呂丸フェリー</p>
                 </div>
                 <div class="ship-time">
-                  <img src="images/clock.png" alt="clock">
+                  <img src="images/clock.png" alt="clock" class="fadein">
                   <p>17:00</p>
                 </div>
                 <div class="ship-name">
-                  <img src="images/ship2.png" alt="ship">
+                  <img src="images/ship2.png" alt="ship" class="fadein">
                   <p>住吉港発-三洋汽船旅客船</p>
                 </div>
                 <div class="ship-time">
-                  <img src="images/clock.png" alt="clock">
+                  <img src="images/clock.png" alt="clock" class="fadein">
                   <p>17:30</p>
                 </div>
                 <div class="ship-name">
-                  <img src="images/ship2.png" alt="ship">
+                  <img src="images/ship2.png" alt="ship" class="fadein">
                   <p>伏越港発-大福丸フェリー</p>
                 </div>
                 <div class="ship-time">
-                  <img src="images/clock.png" alt="clock">
+                  <img src="images/clock.png" alt="clock" class="fadein">
                   <p>18:00</p>
                 </div>
               </div>
@@ -187,19 +189,19 @@
               <div class="access-block-title">帰り(北木島→笠岡)</div>
               <div class="access-block-list">
                 <div class="ship-name">
-                  <img src="images/ship2.png" alt="ship">
+                  <img src="images/ship2.png" alt="ship" class="fadein">
                   <p>伏越港着-金風呂丸フェリー</p>
                 </div>
                 <div class="ship-time">
-                  <img src="images/clock.png" alt="clock">
+                  <img src="images/clock.png" alt="clock" class="fadein">
                   <p>21:30</p>
                 </div>
                 <div class="ship-name">
-                  <img src="images/ship2.png" alt="ship">
+                  <img src="images/ship2.png" alt="ship" class="fadein">
                   <p>伏越港着-金風呂丸フェリー</p>
                 </div>
                 <div class="ship-time">
-                  <img src="images/clock.png" alt="clock">
+                  <img src="images/clock.png" alt="clock" class="fadein">
                   <p>22:00</p>
                 </div>
               </div>
@@ -217,7 +219,7 @@
     <!-- end access -->
     <!-- contact -->
     <section id="contact">
-      <div class="container">
+      <div class="container fadein">
         <h3 class="section-title">お問い合わせ</h3>
         <div class="contact-block">
           <p>TEL</p>
@@ -255,5 +257,6 @@
   </footer>
   <!-- end footer -->
   <script src="js/script.js"></script>
+  <script src="js/slick.min.js"></script>
 </body>
 </html>

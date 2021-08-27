@@ -35,26 +35,45 @@
       height: 100vh;
       background: $base;
       transform: translateX(100%);
+      transition: .5s;
     }
 
     ul {
       @include flex();
       width: 100%;
+      @include mq(md) {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
       @include mq() {
         flex-direction: column;
         padding-top: 90px;
       }
 
       li {
+        @include mq(md) {
+          width: 120px;
+        }
         @include mq() {
           text-align: right;
           margin-bottom: 20px;
           padding-right: 30px;
         }
+
         a {
-          font-size: 18px;
+          font-size: 1.8rem;
           font-family: $family_accent;
           font-weight: bold;
+          transition: .5s;
+          @include mq(md) {
+            font-size: 1.6rem;
+          }
+
+          &:hover {
+            color: $accent;
+            background: $title_under;
+            border-radius: 5px;
+          }
         }
       }
     }
@@ -69,6 +88,7 @@
 
 /* berger btn */ 
 .berger-btn {
+  display: none;
   @include mq() {
     position: fixed;
     top: 40px;
@@ -79,6 +99,7 @@
       width: 40px;
       height: 2px;
       background: $main;
+      transition: .5s;
 
       &:nth-child(2) {
         transform: translateY(8px);
@@ -127,6 +148,15 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .slick-list {
+      width: 100%;
+      height: 100%;
+
+      .slick-track {
+        height: 100%;
+      }
+    }
   }
 
   .mv-inner {
@@ -135,6 +165,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 2;
 
     .container {
       position: relative;
@@ -148,6 +179,7 @@
         margin-left: auto;
         padding: 85px 33px 112px;
         background: $black_layer1;
+        border-radius: 50px;
         writing-mode: vertical-lr;
         font-size: 5.5rem;
         font-weight: bold;
@@ -167,9 +199,11 @@
         left: 0;
         width: 100%;
         @include flex();
+        font-weight: bold;
         align-items: flex-end;
         padding: 23px 33px;
         background: $black_layer1;
+        border-radius: 50px;
         box-sizing: border-box;
         @include mq() {
           flex-direction: column;
@@ -201,6 +235,12 @@
   .container {
     position: relative;
     text-align: center;
+    opacity: 0;
+    transition: 3s;
+
+    &.fadein.appearance {
+      opacity: 1;
+    }
 
     p {
       font-size: 2.5rem;
@@ -253,7 +293,7 @@
 /* about */ 
 #about {
   position: relative;
-  background-image: url(images/hanabi4.jpg);
+  background-image: url(../images/hanabi4.jpg);
   background-size: cover;
 
   &::before {
@@ -263,6 +303,12 @@
   .container {
     position: relative;
     text-align: center;
+    opacity: 0;
+    transition: 3s;
+
+    &.fadein.appearance {
+      opacity: 1;
+    }
 
     p {
       width: 600px;
@@ -282,7 +328,7 @@
 /* cruise */ 
 #cruise {
   position: relative;
-  background-image: url(images/ship3.jpg);
+  background-image: url(../images/ship3.jpg);
   background-size: cover;
   padding-bottom: 80px;
 
@@ -293,6 +339,14 @@
   .container {
     position: relative;
     text-align: center;
+    opacity: 0;
+    transform: translateY(300px);
+    transition: 2s;
+
+    &.fadein.appearance {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     >p {
       font-family: $family_accent;
@@ -314,6 +368,11 @@
       margin: 0 auto;
       width: 681px;
       @include flex(space-between);
+      @include mq(md2) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
       @include mq() {
         flex-direction: column;
         width: 100%;
@@ -326,9 +385,13 @@
         border: 3px solid $main;
         border-radius: 50px;
         padding: 30px 25px 0;
+        @include mq(md2) {
+          width: 60%;
+        }
         @include mq() {
           width: 100%;
         }
+        
 
         &:first-child {
           margin-bottom: 13px;
@@ -379,8 +442,14 @@
     text-align: center;
 
     .section-title {
+      opacity: 0;
+      transition: 2s;
       @include mq() {
         padding-top: 30px; 
+      }
+
+      &.appearance {
+        opacity: 1;
       }
     }
 
@@ -394,6 +463,10 @@
       border-radius: 30px;
       margin: 0 auto 10px;
       z-index: 1;
+      @include mq(md) {
+        width: 100%;
+        box-sizing: border-box;
+      }
       @include mq() {
         flex-direction: column; 
         width: 100%;
@@ -403,8 +476,49 @@
         padding-left: 3px;
       }
 
+      &:nth-of-type(1) {
+        opacity: 0;
+        transform: translateX(-300px);
+        transition: 2s;
+
+        &.appearance {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+        transform: translateX(-300px);
+        transition: 2s .5s;
+
+        &.appearance {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      &:nth-of-type(3) {
+        opacity: 0;
+        transform: translateX(-300px);
+        transition: 2s 1s;
+
+        &.appearance {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
       &:nth-of-type(4) {
         display: block;
+        opacity: 0;
+        transform: translateX(-300px);
+        transition: 2s 1.5s;
+
+        &.appearance {
+          opacity: 1;
+          transform: translateX(0);
+        }
       }
 
       .event-outline-title {
@@ -423,10 +537,22 @@
       padding: 20px 43px;
       margin: 0 auto;
       z-index: 1;
+      opacity: 0;
+      transform: translateX(-300px);
+      transition: 2s 1.5s;
+      @include mq(md) {
+        width: 100%;
+        box-sizing: border-box; 
+      }
       @include mq() {
         width: 100%; 
         box-sizing: border-box;
         padding: 3px 15px;
+      }
+
+      &.appearance {
+        opacity: 1;
+        transform: translateX(0);
       }
     }
 
@@ -434,6 +560,12 @@
       width: 140px;
       position: absolute;
       z-index: 0;
+      opacity: 0;
+      transition: 2s;
+
+      &.appearance {
+        opacity: 1;
+      }
 
       &:nth-of-type(1) {
         top: 141px;
@@ -465,7 +597,7 @@
     
     .access-inner {
       @include flex();
-      @include mq() {
+      @include mq(md) {
         flex-direction: column; 
       }
 
@@ -492,6 +624,9 @@
             background: $main;
             border-radius: 50px;
             margin-bottom: 20px;
+            @include mq(md) {
+              margin: 0 auto;
+            }
             @include mq() {
               font-size: 1.8rem;
               padding: 5px 20px;
@@ -503,9 +638,13 @@
             flex-wrap: wrap;
             line-height: 2;
             text-align: left;
+            @include mq(md) {
+              text-align: center;
+            }
             @include mq() {
               flex-direction: column;
             }
+
 
             p {
               display: inline-block;
@@ -520,6 +659,14 @@
               img {
                 width: 30px;
                 vertical-align: text-bottom;
+                opacity: 0;
+                transform: translateX(-200px);
+                transition: 2s;
+
+                &.appearance {
+                  opacity: 1;
+                  transform: translateX(0);
+                }
               }
 
             }
@@ -534,6 +681,12 @@
               img {
                 width: 24px;
                 vertical-align: text-bottom;
+                opacity: 0;
+                transition: 2s;
+
+                &.appearance {
+                  opacity: 1;
+                }
               }
             }
           }
@@ -543,12 +696,19 @@
           font-size: 1.8rem;
           text-align: left;
           margin-top: 10px;
+          @include mq(md) {
+            text-align: center;
+          }
         }
       }
 
       iframe {
         width: 400px;
         height: 350px;
+        @include mq(md) {
+          margin: 0 auto;
+          margin-top: 40px;
+        } 
         @include mq() {
           width: 100%;
           margin-top: 40px;
@@ -561,7 +721,7 @@
 /* contact */ 
 #contact {
   position: relative;
-  background-image: url(images/beach.jpg);
+  background-image: url(../images/beach.jpg);
   background-size: cover;
   padding-bottom: 87px;
   @include mq() {
@@ -575,6 +735,12 @@
   .container {
     position: relative;
     text-align: center;
+    opacity: 0;
+    transition: 3s;
+
+    &.appearance {
+      opacity: 1;
+    }
 
     .contact-block {
       width: 485px;
