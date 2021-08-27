@@ -90,6 +90,7 @@
 .berger-btn {
   display: none;
   @include mq() {
+    display: block;
     position: fixed;
     top: 40px;
     right: 30px;
