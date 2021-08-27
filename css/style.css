@@ -249,6 +249,9 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     padding-top: 90px;
   }
 }
@@ -301,9 +304,11 @@ img {
 
 @media screen and (max-width: 600px) {
   .berger-btn {
+    display: block;
     position: fixed;
     top: 40px;
     right: 30px;
+    z-index: 5;
   }
   .berger-btn span {
     display: block;
