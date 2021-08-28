@@ -887,8 +887,8 @@ img {
   opacity: 0;
   -webkit-transform: translateX(-300px);
           transform: translateX(-300px);
-  -webkit-transition: 2s 1.5s;
-  transition: 2s 1.5s;
+  -webkit-transition: 2s .9s;
+  transition: 2s .9s;
 }
 
 @media screen and (max-width: 1020px) {
@@ -1050,6 +1050,7 @@ img {
 
 #access .container .access-inner .access-contents .access-block .access-block-list .ship-name {
   width: 55%;
+  text-align: left;
 }
 
 @media screen and (max-width: 600px) {
