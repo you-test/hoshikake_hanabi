@@ -25,7 +25,7 @@ $(function() {
       let target = $(this).offset().top;
       let windowHeight = $(window).height();
 
-      if (scroll > target - windowHeight + 150) {
+      if (scroll > target - windowHeight + 100) {
         $(this).addClass('appearance');
       }
     });

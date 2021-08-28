@@ -493,7 +493,7 @@
       &:nth-of-type(2) {
         opacity: 0;
         transform: translateX(-300px);
-        transition: 2s .5s;
+        transition: 2s .3s;
 
         &.appearance {
           opacity: 1;
@@ -504,7 +504,7 @@
       &:nth-of-type(3) {
         opacity: 0;
         transform: translateX(-300px);
-        transition: 2s 1s;
+        transition: 2s .6s;
 
         &.appearance {
           opacity: 1;
@@ -516,7 +516,7 @@
         display: block;
         opacity: 0;
         transform: translateX(-300px);
-        transition: 2s 1.5s;
+        transition: 2s .9s;
 
         &.appearance {
           opacity: 1;
