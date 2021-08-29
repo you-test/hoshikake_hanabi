@@ -180,17 +180,17 @@
 
       h2 {
         margin-left: auto;
-        padding: 85px 33px 112px;
+        padding: 50px 33px 50px;
         background: $black_layer1;
         border-radius: 50px;
         writing-mode: vertical-lr;
-        font-size: 5.5rem;
+        font-size: 4.5rem;
         font-weight: bold;
-        letter-spacing: 0.3em;
+        letter-spacing: 0.2em;
         height: 100%;
         box-sizing: border-box;
         @include mq() {
-          font-size: 4.5rem;
+          font-size: 4rem;
           padding-right: 25px;
           padding-left: 25px;
         }

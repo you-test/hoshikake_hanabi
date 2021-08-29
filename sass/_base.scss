@@ -44,6 +44,7 @@ img {
   background: linear-gradient(transparent 85%, $title_under 85%);
   padding: 50px 0 0;
   margin-bottom: 30px;
+  border-radius: 8px;
   @include mq() {
     font-size: 2.5rem;
   }

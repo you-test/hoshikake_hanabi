@@ -128,6 +128,7 @@ img {
   background: linear-gradient(transparent 85%, rgba(255, 255, 255, 0.4) 85%);
   padding: 50px 0 0;
   margin-bottom: 30px;
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 600px) {
@@ -398,15 +399,15 @@ img {
 
 #mv .mv-inner .container h2 {
   margin-left: auto;
-  padding: 85px 33px 112px;
+  padding: 50px 33px 50px;
   background: rgba(12, 12, 10, 0.5);
   border-radius: 50px;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
-  font-size: 5.5rem;
+  font-size: 4.5rem;
   font-weight: bold;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -414,7 +415,7 @@ img {
 
 @media screen and (max-width: 600px) {
   #mv .mv-inner .container h2 {
-    font-size: 4.5rem;
+    font-size: 4rem;
     padding-right: 25px;
     padding-left: 25px;
   }
